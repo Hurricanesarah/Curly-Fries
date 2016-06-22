@@ -1,2 +1,2 @@
-# curly-tribble
-Thanks welcome to my responsitory! 
+# curly-fries
+Random bits & pieces on analytics, data and findings. Dribbles. 
