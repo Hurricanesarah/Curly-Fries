@@ -1,2 +1,2 @@
 # curly-tribble
-Randomness 
+Thanks welcome to my responsitory! 
