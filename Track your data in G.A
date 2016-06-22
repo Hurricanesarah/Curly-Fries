@@ -1,0 +1,34 @@
+
+Trackign events on G.A 
+
+// Get the pathname of the URL without domain
+var href = window.location.href;
+var parser = document.createElement('a');
+parser.href = href;
+var pathname = parser.pathname;
+var string = pathname.substring(1, pathname.length);
+var result = string.split("/");
+
+/* 
+   This code shifts the array index from 0 to 1 effectively 
+   deleting the first path in the URL. Disable this if you 
+   don't need that functionality.
+*/
+var shift = result.shift();
+var result = shift.toString();
+
+function gaEventNewsletter() {
+  ga('send', 'event', 'newsletter', 'signup', result);
+}
+
+function gaEventVideo() {
+  ga('send', 'event', 'video', 'play', result);
+}
+
+function gaEventGallery() {
+  ga('send', 'event', 'gallery', 'view', result);
+}
+
+function gaEventSocialShare(source) {
+  ga('send', 'event', 'share', source, result);
+}
